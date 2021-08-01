@@ -1,16 +1,11 @@
 public class Grilos  extends Thread{
 	
 	//variaveis
-	int lChegada = 100;
-	
-	int distancia;
-	
-	int max = 20;
-	
+    int lChegada = 100;
+    int distancia;
+    int max = 20;
     int min = 5;
-    
-    int posição;
-    
+    int posiÃ§Ã£o;
     int saltos;
     
     private String nome;
@@ -35,14 +30,14 @@ public class Grilos  extends Thread{
         
         System.out.println("A chegada esta a "+lChegada);
         
-        while(posição < lChegada) {
+        while(posiÃ§Ã£o < lChegada) {
         	int distancia = (int)Math.floor(Math.random()*(max-min+1)+min);
-        	posição += distancia;
-        	System.out.println(nome + " pulou " + distancia + " Cm" + ", percorreram um total de " + posição +" Cm");
+        	posiÃ§Ã£o += distancia;
+        	System.out.println(nome + " pulou " + distancia + " Cm" + ", percorreram um total de " + posiÃ§Ã£o +" Cm");
         	saltos++;
         }
         
-        if (posição >= lChegada) {
+        if (posiÃ§Ã£o >= lChegada) {
         	System.out.println(nome + " Chegou " + "com total de saltos de " + saltos);
         }
         
